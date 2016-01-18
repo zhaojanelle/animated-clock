@@ -1,0 +1,43 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  background-color: #000;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.clock-face {
+  height: 300px;
+  margin: 50px auto;
+  width: 300px;
+
+  background: transparent url("../images/clock-face.svg") no-repeat center center;
+}
+
+.center {
+  width: 28px;
+}
+
+.hand {
+  width: 14px;
+}
+
+.hand-hour {
+
+}
+
+.hand-minute {
+
+}

@@ -8,7 +8,8 @@
 **Use CSS keyframe animations to make a clock face with rotating hands.**
 
 - The hands on the clock should automatically rotate around the clock face—completing 12 hours.
-- Some of the HTML & CSS is already complete for you.
+- The HTML is completely done.
+- Some of the CSS is already complete for you.
 
 ---
 

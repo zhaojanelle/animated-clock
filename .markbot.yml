@@ -1,0 +1,49 @@
+repo: "animated-clock"
+canvasCourse: "web-dev-4"
+
+naming: true
+restrictFileTypes: true
+liveWebsite: true
+
+git:
+  numCommits: 2
+  allCommitted: true
+  allSynced: true
+
+html:
+  - path: "index.html"
+    locked: true
+
+css:
+  - path: "css/main.css"
+    valid: true
+    bestPractices: true
+    has:
+      - [".clock-face", "position", "relative"]
+      - [".center", "position", "absolute"]
+      - [".hand", "position", "absolute"]
+      - [".hand-hour", "animation"]
+      - [".hand-minute", "animation"]
+    search:
+      - "@keyframes"
+  - path: "css/modules.css"
+    locked: true
+
+screenshots:
+  - path: "index.html"
+    sizes: [400]
+
+functionality:
+  - path: "index.html"
+    tests:
+      - |
+        let handMin̛n = $('.hand-minute');
+        let handHour = $('.hand-hour');
+        let oldMin = css(handMin̛n).transform;
+        let oldHour = css(handHour).transform;
+
+        setTimeout(function () {
+          if (css(handMin̛n).transform == oldMin) fail('The minute hand doesn’t rotate.');
+          if (css(handHour).transform == oldHour) fail('The hour hand doesn’t rotate.');
+          pass();
+        }, 250);

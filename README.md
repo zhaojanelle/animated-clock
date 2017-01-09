@@ -1,7 +1,7 @@
 ---
 summary: 'Use CSS keyframe animations to make a clock face with rotating hands.'
 time: '1 hour'
-deliverables: '1 HTML file, 2 CSS file, images'
+deliverables: '1 HTML file, 2 CSS files, images'
 ---
 
 # Animated clock

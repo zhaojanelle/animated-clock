@@ -1,49 +1,65 @@
-repo: "animated-clock"
-canvasCourse: "web-dev-4"
+repo: 'animated-clock'
+canvasCourse: 'web-dev-3'
 
-naming: true
-restrictFileTypes: true
-liveWebsite: true
-
-git:
-  numCommits: 2
-  allCommitted: true
-  allSynced: true
+inherit:
+  - naming-restrict-live
+  - git-2
+  - html
+  - css
 
 html:
-  - path: "index.html"
-    locked: true
+  - path: 'index.html'
+    outline: false
+    has:
+      - 'div.clock-face'
+      - '.clock-face img[src*="hand-hour.svg"]'
+      - '.clock-face img[src*="hand-minute.svg"]'
+      - '.clock-face img[src*="clock-center.svg"]'
 
 css:
-  - path: "css/main.css"
-    valid: true
-    bestPractices: true
+  - path: 'css/main.css'
     has:
-      - [".clock-face", "position", "relative"]
-      - [".center", "position", "absolute"]
-      - [".hand", "position", "absolute"]
-      - [".hand-hour", "animation"]
-      - [".hand-minute", "animation"]
+      - ['.clock-face', 'position', 'relative']
+      - ['.clock-center', 'position', 'absolute']
+      - ['.hand', 'position', 'absolute']
+      - ['.hand-hour', 'animation']
+      - ['.hand-minute', 'animation']
     search:
-      - "@keyframes"
-  - path: "css/modules.css"
+      - '@keyframes'
+      - '\.\./images/clock-face\.svg'
+      - '300px'
+      - 'calc\(50% - 14px\)'
+      - 'transform\: rotate\(0deg\)'
+      - 'transform\: rotate\(360deg\)'
+
+  - path: 'css/modules.css'
     locked: true
 
+files:
+  - path: 'images/clock-center.svg'
+    smushed: true
+  - path: 'images/clock-face.svg'
+    smushed: true
+  - path: 'images/hand-hour.svg'
+    smushed: true
+  - path: 'images/hand-minute.svg'
+    smushed: true
+
 screenshots:
-  - path: "index.html"
+  - path: 'index.html'
     sizes: [400]
 
 functionality:
-  - path: "index.html"
+  - path: 'index.html'
     tests:
       - |
-        let handMin̛n = $('.hand-minute');
+        let handMin = $('.hand-minute');
         let handHour = $('.hand-hour');
-        let oldMin = css(handMin̛n).transform;
+        let oldMin = css(handMin).transform;
         let oldHour = css(handHour).transform;
 
         setTimeout(function () {
-          if (css(handMin̛n).transform == oldMin) fail('The minute hand doesn’t rotate.');
-          if (css(handHour).transform == oldHour) fail('The hour hand doesn’t rotate.');
+          if (css(handMin).transform == oldMin) return fail('The minute hand doesn’t rotate.');
+          if (css(handHour).transform == oldHour) return fail('The hour hand doesn’t rotate.');
           pass();
         }, 250);

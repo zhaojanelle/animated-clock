@@ -1,36 +1,17 @@
----
-summary: 'Use CSS keyframe animations to make a clock face with rotating hands.'
-time: '1 hour'
-deliverables: '1 HTML file, 2 CSS files, images'
----
+# Animated clock lesson starter
 
-# Animated clock
+**A lesson in using CSS keyframe animations to make a clock face with rotating hands.**
 
-## Overview
+- Approx. completion time: 1 hour
+- Deliverables: HTML, CSS, images
+- Due: Before the end of class
 
-- *Fork this repository.*
-- The hands on the clock should automatically rotate around the clock face—completing 12 hours.
-- Some of the CSS is already complete for you.
-- **DO NOT change the HTML file.**
-- *Run it through Markbot and make sure it passes all the checks.*
+This is the starter code for a step-by-step lesson. Each step is described in detail here:
+
+### [**Follow the “Animated clock” step-by-step lesson ➔**](https://learn-the-web.algonquindesign.ca/courses/web-dev-3/animated-clock/)
 
 ---
 
-## Details
+## Questions or concerns
 
-*Hour hand rotation time:* `6s`
-
----
-
-## Goal
-
-Visually match the images in the “screenshots” folder and create the interaction shown in the linked video.
-
-- Final screenshots in the “screenshots” folder.
-- [**Watch this video to see how it interacts.**](https://youtu.be/p380u4ztWoM)
-
----
-
-## Hand in
-
-Drop this folder into your Markbot application. Make sure to fix all the errors. And submit to Canvas using Markbot.
+If you run into problems completing the task ask the teacher in class or, if you’re working outside of class, **create an Issue on your repository and tag the teacher**.

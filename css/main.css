@@ -9,3 +9,18 @@ html {
   width: 300px;
   background: transparent url("../images/clock-face.svg") no-repeat center center;
 }
+
+.clock-center {
+  bottom: calc(50% - 14px);
+  left: calc(50% - 14px);
+  position: absolute;
+  width: 28px;
+}
+
+.hand {
+  bottom: calc(50% - 8px);
+  left: calc(50% - 7px);
+  position: absolute;
+  width: 14px;
+  transform-origin: 50% calc(100% - 8px);
+}

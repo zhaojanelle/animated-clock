@@ -1,3 +1,11 @@
 html {
   background-color: #000;
 }
+
+.clock-face {
+  height: 300px;
+  margin: 50px auto;
+  position: relative;
+  width: 300px;
+  background: transparent url("../images/clock-face.svg") no-repeat center center;
+}
